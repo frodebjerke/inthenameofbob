@@ -10,7 +10,21 @@
 	provide you efficient tools to remember. A fast and fun way to
 	remember names.</p>
 {{else}}
-	Else else else
+	<ul class="thumbnails">
+	{{#each groups}}		
+		<li class="span4">
+		<a href="#" class="thumbnail">
+		{{groupname}}
+		</a>
+		</li>
+	{{/each}}
+	<li class="span4">
+		<div class="thumbnail">
+			<input class="input groupname" placeholder="Groupname"/>
+			<a href="#" class="btn btn-primary createGroup">Create Group</a>
+		</div>
+	</li>
+	</ul>
 {{/if}}
 </div>
 </div>
