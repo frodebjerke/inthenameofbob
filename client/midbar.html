@@ -2,13 +2,20 @@
 <div class="row-fluid">
 <div class="span12">
 {{#if notSignedIn currentUser}}
-	<h1>In the name of Bob</h1>
-	<p>In the name of Bob is a web application that helps you to remember names.
+<div class="hero-unit">
+  <h1>In the name of Bob</h1>
+  <p>In the name of Bob is a web application that helps you to remember names.
 	Learn the best techniques from previous world record holder in memory,
 	Oddbjørn By. Perfect for teachers, guides and those who meet a lot of
 	people. You can easily upload pictures and names, In the name of Bob will
 	provide you efficient tools to remember. A fast and fun way to
 	remember names.</p>
+  <p>
+    <a class="btn btn-primary btn-large">
+      Register now
+    </a>
+  </p>
+</div>
 {{else}}
 	<ul class="thumbnails">
 	{{#each groups}}		
@@ -37,6 +44,7 @@
 {{# with showGroup}}
 <div class="row-fluid">
 	<div class="span12">
+
 		<h1>{{groupname}}</h1>
 	</div>
 </div>
