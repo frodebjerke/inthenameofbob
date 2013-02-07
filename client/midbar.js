@@ -32,6 +32,7 @@ Template.midbar.events({
 	},
 
 	"click .group": function (event) {
-		Session.set("showGroup", event.srcElement.id);
+		console.log(this._id);
+		Session.set("showGroup", this._id);
 	}
 });  
