@@ -13,19 +13,33 @@
 	<ul class="thumbnails">
 	{{#each groups}}		
 		<li class="span4">
-		<a href="#" class="thumbnail">
+		<a href="#" id="{{_id}}"class="thumbnail group">
 		{{groupname}}
 		</a>
 		</li>
 	{{/each}}
-	<li class="span4">
-		<div class="thumbnail">
-			<input class="input groupname" placeholder="Groupname"/>
-			<a href="#" class="btn btn-primary createGroup">Create Group</a>
-		</div>
+	<li class="span2">
+		<a href="#" id="addGroup" class="thumbnail">Create Group</a>
 	</li>
 	</ul>
 {{/if}}
 </div>
 </div>
+{{# if showAddGroup}}
+<div class="row-fluid">
+	<div class="span12">
+		<input id="groupName" class="input" placeholder="Groupname"/>
+		<a href="#" id="createGroup" class="btn btn-primary">Create Group</a>
+	</div>
+</div>
+{{/if}}
+{{# if showGroup}}
+{{# with showGroup}}
+<div class="row-fluid">
+	<div class="span12">
+		<h1>{{groupname}}</h1>
+	</div>
+</div>
+{{/with}}
+{{/if}}
 </template>
