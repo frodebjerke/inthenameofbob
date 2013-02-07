@@ -31,6 +31,10 @@ Template.midbar.events({
 		Session.set("showAddGroup", true);
 	},
 
+	"click .closeAddGroup": function (event) {
+		Session.set("showAddGroup", false);
+	},
+
 	"click .group": function (event) {
 		Session.set("showGroup", this._id);
 	},
