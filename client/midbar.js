@@ -4,7 +4,7 @@ Template.midbar.notSignedIn = function(user) {
 	return user == null;
 };
 
-Template.midbar.groups = function() {
+Template.midbar.threeGroups = function() {
 	return Groups.find();
 };
 
@@ -33,5 +33,13 @@ Template.midbar.events({
 
 	"click .group": function (event) {
 		Session.set("showGroup", this._id);
+	},
+
+	"click .play": function (event) {
+		Session.set("play", true);
+	},
+
+	"click .manage": function (event) {
+		Session.set("manage", true);
 	}
 });  

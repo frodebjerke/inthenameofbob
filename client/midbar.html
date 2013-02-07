@@ -18,8 +18,8 @@
 </div>
 {{else}}
 	<ul class="thumbnails">
-	{{#each groups}}		
-		<li class="span4">
+	{{#each threeGroups}}		
+		<li class="span3">
 		<a href="#" class="thumbnail group">
 		{{groupname}}
 		</a>
@@ -44,8 +44,15 @@
 {{# with showGroup}}
 <div class="row-fluid">
 	<div class="span12">
-
 		<h1>{{groupname}}</h1>
+		<ul class="thumbnails">
+			<li>
+				<a href="#" class="thumbnail play action">Play a game</a>
+			</li>
+			<li>
+				<a href="#" class="thumbnail manage action">Manage persons</a>
+			</li>
+		</ul>
 	</div>
 </div>
 {{/with}}
