@@ -1,58 +1,65 @@
 <template name="midbar"> 
-<div class="row-fluid">
-<div class="span12">
-{{#if notSignedIn currentUser}}
-<div class="hero-unit">
-  <h1>{{strings "APP_NAME"}}</h1>
-  <p>{{strings "DESCRIPTION"}}</p>
-  <p>
-    <a class="btn btn-primary btn-large">
-      {{strings "REGISTER_BUTTON"}}
-    </a>
-  </p>
-</div>
-{{else}}
-	<ul class="thumbnails">
-	{{#each threeGroups}}		
-		<li class="span3">
-		<a href="#" class="thumbnail group">
-		{{groupname}}
-		</a>
-		</li>
-	{{/each}}
-	<li class="span2">
-		<a href="#" id="addGroup" class="thumbnail">{{strings "CREATE_GROUP"}}</a>
-	</li>
-	</ul>
-{{/if}}
-</div>
-</div>
-{{# if showAddGroup}}
-<div class="row-fluid">
-	<div class="span8 offset2 well">
-		<input id="groupName" class="input input-medium" placeholder="Groupname"/>
-		<a href="#" id="createGroup" class="btn btn-primary">{{strings "CREATE_GROUP"}}</a>
-		<button href="#" class="close closeAddGroup">&times;</button>
-	</div>
-</div>
-{{/if}}
-{{# if showGroup}}
-{{# with showGroup}}
-<div class="row-fluid">
-	<div class="span12">
-		<div class="page-header">
-			<h1>{{groupname}}</h1>
+	<div class="row-fluid">
+		{{#if notSignedIn currentUser}}
+		<div class="span12">
+			<div class="hero-unit">
+				<h1>{{strings "APP_NAME"}}</h1>
+				<p>{{strings "DESCRIPTION"}}</p>
+				<p> 
+					<a class="btn btn-primary btn-large">
+						{{strings "REGISTER_BUTTON"}}
+					</a>
+				</p>
+			</div>
 		</div>
-		<ul class="thumbnails">
-			<li>
-				<a href="#" class="thumbnail play action">{{strings "PLAY_GAME"}}</a>
-			</li>
-			<li>
-				<a href="#" class="thumbnail manage action">{{strings "MANAGE_GROUP"}}</a>
-			</li>
-		</ul>
+		{{else}}
+		<div class="span3">
+			<ul class="thumbnails">
+				{{#each threeGroups}}		
+				<li class="row-fluid">
+					<div class="span10 offset1">
+						<a href="#" class="thumbnail group">
+							{{groupname}}
+						</a>
+					</div>
+				</li>
+				{{/each}}
+				<li class="span2">
+					<a href="#" id="addGroup" class="thumbnail">{{strings "CREATE_GROUP"}}</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="span9">
+			{{# if showAddGroup}}
+			<div class="row-fluid">
+				<div class="span8 offset2 well">
+					<input id="groupName" class="input input-medium" placeholder="Groupname"/>
+					<a href="#" id="createGroup" class="btn btn-primary">{{strings "CREATE_GROUP"}}</a>
+					<button href="#" class="close closeAddGroup">&times;</button>
+				</div>
+			</div>
+			{{/if}}
+			{{# if showGroup}}
+			{{# with showGroup}}
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="page-header">
+						<h1>{{groupname}}</h1>
+					</div>
+					<ul class="thumbnails">
+						<li>
+							<a href="#" class="thumbnail play action">{{strings "PLAY_GAME"}}</a>
+						</li>
+						<li>
+							<a href="#" class="thumbnail manage action">{{strings "MANAGE_GROUP"}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			{{/with}}
+			{{/if}}
+		</div>
+		{{/if}}
 	</div>
-</div>
-{{/with}}
-{{/if}}
 </template>
