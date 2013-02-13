@@ -1,0 +1,20 @@
+<template name="midbar"> 
+	<div class="row-fluid">
+		{{#if notSignedIn currentUser}}
+		{{> infoView}}
+		{{else}}
+		<div class="span3">
+			{{> groupsView}}
+		</div>
+		<div class="span7 offset1">
+			{{> globalMenuView}}
+			{{> activeGroupView}}
+		</div>
+		{{/if}}
+	</div>
+</template>
+
+
+
+
+

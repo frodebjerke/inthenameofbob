@@ -1,0 +1,25 @@
+<template name="activeGroupView">
+	{{# if activeGroup}}
+	{{# with activeGroup}}
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="page-header">
+				<h1>{{groupname}}</h1>
+			</div>
+
+			<ul class="nav nav-tabs">
+				{{# each groupAction}}
+				<li class="{{activeView}}">
+					<a href="#" class="view">{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+
+			{{#if dashboardIsActive}}
+			{{> dashboardView}}
+			{{/if}}
+		</div>
+	</div>
+	{{/with}}
+	{{/if}}
+</template>

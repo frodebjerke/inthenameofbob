@@ -1,0 +1,13 @@
+<template name="groupsView">
+	<ul class="thumbnails">
+		{{#each groups}}		
+		<li class="row-fluid">
+			<div class="span10 offset1">
+				<a href="#" class="thumbnail group">
+					{{groupname}}
+				</a>
+			</div>
+		</li>
+		{{/each}}
+	</ul>
+</template>
