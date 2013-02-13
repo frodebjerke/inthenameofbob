@@ -4,5 +4,10 @@ Strings = {
 	REGISTER_BUTTON: "Register now",
 	CREATE_GROUP: "Create group",
 	PLAY_GAME: "Play a game",
-	MANAGE_GROUP: "Manage persons"
+	MANAGE_GROUP: "Manage persons",
+	groups: {
+		DASHBOARD: "Dashboard",
+		GAME: "Game",
+		MANAGE: "MANAGE"
+	}
 };

@@ -47,6 +47,16 @@
 					<div class="page-header">
 						<h1>{{groupname}}</h1>
 					</div>
+
+					<ul class="nav nav-tabs">
+						{{# each groupView}}
+						<li class="{{activeView}}">
+							<a href="#" class="view">{{name}}</a>
+						</li>
+						{{/each}}
+					</ul>
+
+					{{#if dashboardIsActive}}
 					<ul class="thumbnails">
 						<li>
 							<a href="#" class="thumbnail play action">{{strings "PLAY_GAME"}}</a>
@@ -56,8 +66,9 @@
 						</li>
 						<li>
 							<button href="#" class="delete deleteGroup">Delete group</button>
-						</>
+						</li>
 					</ul>
+					{{/if}}
 				</div>
 			</div>
 			{{/with}}
