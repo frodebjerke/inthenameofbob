@@ -31,6 +31,10 @@ Meteor.methods({
 		}
 	},
 
+	addPersons: function (groupId, p) {
+		Groups.update(groupId, {$set: {persons: p}});
+	},
+
 	createGroup: function (options) {
 		options = options || {};
 
@@ -45,7 +49,8 @@ Meteor.methods({
 		} else {
 			return Groups.insert({
 				groupOwner: this.userId,
-				groupname: options.groupname
+				groupname: options.groupname,
+				persons: options.persons
 			});
 		}
 	}
