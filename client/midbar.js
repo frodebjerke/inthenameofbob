@@ -45,5 +45,10 @@ Template.midbar.events({
 
 	"click .manage": function (event) {
 		Session.set("manage", true);
+	},
+
+	"click .deleteGroup": function(event, template) {
+		Session.set("showGroup", false);
+		var success = Meteor.call("deleteGroup", this._id);
 	}
 });  
