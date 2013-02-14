@@ -1,5 +1,3 @@
-Meteor.subscribe("groups");
-
 Template.midbar.notSignedIn = function(user) {
 	return user == null;
 };
