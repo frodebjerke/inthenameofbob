@@ -9,9 +9,13 @@ Template.activeGroupView.activeView = function() {
 	}
 };
 
-Template.activeGroupView.dashboardIsActive = function() {
-	return Session.get("activeView") == GroupActions[0].name;
+Template.activeGroupView.gameIsActive = function() {
+	return Session.get("activeView") == GroupActions[1].name;
 };
+
+Template.activeGroupView.manageIsActive = function() {
+	return Session.get("activeView") == GroupActions[2].name;
+}
 
 Template.activeGroupView.groupAction = function() {
 	return GroupActions;

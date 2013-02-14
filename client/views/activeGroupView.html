@@ -15,8 +15,14 @@
 				{{/each}}
 			</ul>
 
-			{{#if dashboardIsActive}}
-			{{> dashboardView}}
+			{{#if gameIsActive}}
+				{{> gameView}}
+			{{else}}
+				{{#if manageIsActive}}
+					{{> manageView}}
+				{{else}}
+					{{> dashboardView}}
+				{{/if}}
 			{{/if}}
 		</div>
 	</div>
