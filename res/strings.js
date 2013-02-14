@@ -5,9 +5,11 @@ Strings = {
 	CREATE_GROUP: "Create group",
 	PLAY_GAME: "Play a game",
 	MANAGE_GROUP: "Manage persons",
+	DELETE_BUTTON: "Delete Group",
 	groups: {
 		DASHBOARD: "Dashboard",
 		GAME: "Game",
-		MANAGE: "MANAGE"
+		MANAGE: "MANAGE",
+		DELETE_BUTTON: "Delete Group"
 	}
 };
