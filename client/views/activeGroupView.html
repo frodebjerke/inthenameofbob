@@ -3,9 +3,7 @@
 	{{# with activeGroup}}
 	<div class="row-fluid">
 		<div class="span12">
-			<div class="page-header">
-				<h1>{{groupname}}</h1>
-			</div>
+			<h1>{{groupname}}</h1>
 
 			<ul class="nav nav-tabs">
 				{{# each groupAction}}
@@ -16,13 +14,13 @@
 			</ul>
 
 			{{#if gameIsActive}}
-				{{> gameView}}
+			{{> gameView}}
 			{{else}}
-				{{#if manageIsActive}}
-					{{> manageView}}
-				{{else}}
-					{{> dashboardView}}
-				{{/if}}
+			{{#if manageIsActive}}
+			{{> manageView}}
+			{{else}}
+			{{> dashboardView}}
+			{{/if}}
 			{{/if}}
 		</div>
 	</div>
