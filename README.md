@@ -22,7 +22,8 @@ client/lib/environment.js  # <- configuration of any client side packages
 client/lib/helpers/        # <- any helpers (handlebars or otherwise) that are used often in view files
 client/lib/strings/		   # <- static string resources
 
-client/application.js      # <- subscriptions, basic Meteor.startup code.
+client/application.js      # <- basic Meteor.startup code.
+client/subscriptions.js    # <- subscriptions
 client/index.html          # <- toplevel html
 client/index.js            # <- and its JS
 client/views/<page>.html   # <- the templates specific to a single page
