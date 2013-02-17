@@ -4,7 +4,7 @@ In the name of Bob
 Content
 -------------
 
-Directories and file schema
+Project structure
 -------------
 Based on suggestion from the [Unoficial Meteor FAQ](https://github.com/oortcloud/unofficial-meteor-faq#where-should-i-put-my-files).
 
@@ -12,14 +12,15 @@ Based on suggestion from the [Unoficial Meteor FAQ](https://github.com/oortcloud
 lib/                       # <- any common code for client/server. 
 lib/environment.js         # <- general configuration
 lib/methods.js             # <- Meteor.method definitions
-lib/external               # <- common code from someone else
+lib/external/              # <- common code from someone else
 ## Note that js files in lib folders are loaded before other js files.
 
 collections/               # <- definitions of collections and methods on them (could be models/)
 
 client/lib                 # <- client specific libraries (also loaded first)
 client/lib/environment.js  # <- configuration of any client side packages
-client/lib/helpers         # <- any helpers (handlebars or otherwise) that are used often in view files
+client/lib/helpers/        # <- any helpers (handlebars or otherwise) that are used often in view files
+client/lib/strings/		   # <- static string resources
 
 client/application.js      # <- subscriptions, basic Meteor.startup code.
 client/index.html          # <- toplevel html
