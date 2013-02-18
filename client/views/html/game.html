@@ -1,13 +1,28 @@
 <template name="gameView">
 	<div class="game">
 		<div class="row-fluid">
+			<div class="span3">
+				<button id="startgame" class="btn btn-small {{#unless personExist}}disabled{{/unless}}">New game</button>
+			</div>
 			<div class="span8 offset2">
-				<img src="" class="span12 img-polaroid"></img>
+				{{#if personExist}}
+				{{#if activeGame}}
+				{{personname}}
+				<input id="nameInput" class="input span12"placeholder="WHAT!"/>
+				<button id="answer" class="btn btn-small">
+					Answer
+				</button>
+				{{else}}
+				LOL No active game
+				{{/if}}
+				{{else}}
+				To play a game on this group you have to add people to it.
+				{{/if}}
 			</div>
 		</div>
 		<div class="row-fluid">
 			<div class="span6 offset3">
-				<input id="nameInput" class="input span12" placeholder="WHAT!"></input>
+
 			</div>
 		</div>
 	</div>

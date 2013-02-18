@@ -7,4 +7,7 @@
     }
     Session.set("activeView", GroupActions[0].name);
   });
+
+  		Session.set("activeGame", false);
+		Session.set("gamePersonIndex", 0);
 });
