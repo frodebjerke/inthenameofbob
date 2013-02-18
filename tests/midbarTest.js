@@ -14,10 +14,11 @@ describe('Meteor client-side code', function(){
 	describe('Template.midbar', function(){
 
 		describe('#notSignedIn()', function(){
-			it('should return true when user not signed in', function(){
+			it('should return false when user is signed in', function(){
 				Meteor.userId = function() {return "42"};
 				chai.assert.equal(false , Template.midbar.notSignedIn());
-
+			});
+			it('should return true when user not signed in', function(){
 				Meteor.userId = function() {return null};
 				chai.assert.equal(true, Template.midbar.notSignedIn());
 			});
