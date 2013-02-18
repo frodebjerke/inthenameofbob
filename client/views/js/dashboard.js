@@ -1,9 +1,9 @@
 Template.dashboardView.events({
 	"click .play": function (event) {
-		Session.set("play", true);
+		Session.set("activeView", "Game");
 	},
 
 	"click .manage": function (event) {
-		Session.set("manage", true);
+		Session.set("activeView", "Manage");
 	}
 });
