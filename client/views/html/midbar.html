@@ -1,8 +1,6 @@
 <template name="midbar"> 
 	<div class="row-fluid">
 		{{#if currentUser}}
-		{{> infoView}}
-		{{else}}
 		<div class="span3">
 			{{> groupsView}}
 		</div>
@@ -10,7 +8,9 @@
 			{{> globalMenuView}}
 			{{> activeGroupView}}
 		</div>
-		{{/if}}
+		{{else}}
+		{{> infoView}}
+		{{/if}
 	</div>
 </template>
 
