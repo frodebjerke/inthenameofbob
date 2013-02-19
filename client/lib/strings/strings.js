@@ -6,10 +6,7 @@ Strings = {
 	PLAY_GAME: "Play a game",
 	MANAGE_GROUP: "Manage persons",
 	DELETE_BUTTON: "Delete Group",
-	groups: {
-		DASHBOARD: "Dashboard",
-		GAME: "Game",
-		MANAGE: "MANAGE",
-		DELETE_BUTTON: "Delete Group"
-	}
+	NEW_GAME_BTN: "New game",
+	NO_ACTIVE_GAME_MSG: "No games are active now. Press 'New game' to start a new one.",
+	NO_PEOPLE_IN_GROUP_MSG: "To play a game on this group you have to add people to it."
 };
