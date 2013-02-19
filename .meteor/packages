@@ -5,5 +5,5 @@
 
 preserve-inputs
 bootstrap
-accounts-ui
 accounts-password
+accounts-ui-unstyled
