@@ -1,6 +1,6 @@
 <template name="midbar"> 
 	<div class="row-fluid">
-		{{#if notSignedIn}}
+		{{#if currentUser}}
 		{{> infoView}}
 		{{else}}
 		<div class="span3">
