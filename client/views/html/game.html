@@ -1,10 +1,10 @@
 <template name="gameView">
 	<div class="game">
 		<div class="row-fluid">
-			<div class="span2">
+			<div class="span3">
 				<button id="startgame" class="btn btn-small {{#unless personExist}}disabled{{/unless}}">{{strings "NEW_GAME_BTN"}}</button>
 			</div>
-			<div class="span10">
+			<div class="span9">
 				{{#if personExist}}
 				{{#if activeGame}}
 				<div class="span4">

@@ -2,25 +2,21 @@
 	<h4>Game finished!</h4>
 	<p>You got {{num_correct}} correct answers from {{num_total}} questions.</p>
 	<div class="row-fluid">
-		<div class="span5">
-			<ul>
-				<li><h5>Names</h5></li>
-				{{#each actual}}
-				<li>
-					{{name}}
-				</li>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Your Answer</td>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each questions}}
+				<tr class="{{rowColor}}">
+					<td>{{name}}</td>
+					<td>{{answer}}</td>
+				</tr>
 				{{/each}}
-			</ul>
-		</div>
-		<div class="span5 offset2">
-			<ul>
-				<li><h5>Your answers</h5></li>
-				{{#each answer}}
-				<li>
-					{{name}}
-				</li>
-				{{/each}}
-			</ul>
-		</div>
+			</tbody>
+		</table>
 	</div>
 </template>
