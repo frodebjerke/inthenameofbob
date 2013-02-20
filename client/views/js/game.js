@@ -15,7 +15,7 @@ Template.gameView.hasEndedGame = function() {
 	return Session.get("activeGame");
 };
 
-Template.gameView.endedGame = function() {
+Template.gameView.game = function() {
 	return Games.findOne(Session.get("activeGame"));
 };
 
@@ -39,7 +39,10 @@ Template.gameView.events({
 			personIndex: index,
 			gameId: Session.get("activeGame")
 		});
+
+		template.find("#nameInput").value = "";
 		Session.set("gamePersonIndex", index + 1);
+
 		if (this.persons.length <= index + 1){
 			Meteor.call("gameEnd", {
 				gameId: Session.get("activeGame")

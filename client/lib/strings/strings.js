@@ -8,5 +8,7 @@ Strings = {
 	DELETE_BUTTON: "Delete Group",
 	NEW_GAME_BTN: "New game",
 	NO_ACTIVE_GAME_MSG: "No games are active now. Press 'New game' to start a new one.",
-	NO_PEOPLE_IN_GROUP_MSG: "To play a game on this group you have to add people to it."
+	NO_PEOPLE_IN_GROUP_MSG: "To play a game on this group you have to add people to it.",
+	GAME_NAME_INPUT: "Write the name here",
+	GAME_ANSWER_BTN: "Tell Bob!"
 };
