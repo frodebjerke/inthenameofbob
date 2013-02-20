@@ -15,7 +15,7 @@
 				{{else}}
 				{{#if hasEndedGame}}
 				{{#with endedGame}}
-				GIFF GameID{{userId}}{{ended}}
+				One game has ended {{num_answered}}/{{num_total}} questions answered, of which {{num_correct}} was correct.
 				{{/with}}
 				{{else}}
 				{{strings "NO_ACTIVE_GAME_MSG"}}
