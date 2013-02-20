@@ -2,7 +2,7 @@
 	<div class="game">
 		<div class="row-fluid">
 			<div class="span3">
-				<button id="startgame" class="btn btn-small {{#unless personExist}}disabled{{/unless}}">New game</button>
+				<button id="startgame" class="btn btn-small {{#unless personExist}}disabled{{/unless}}">{{strings "NEW_GAME_BTN"}}</button>
 			</div>
 			<div class="span8 offset2">
 				{{#if personExist}}
@@ -13,10 +13,10 @@
 					Answer
 				</button>
 				{{else}}
-				LOL No active game
+				{{strings "NO_ACTIVE_GAME_MSG"}}
 				{{/if}}
 				{{else}}
-				To play a game on this group you have to add people to it.
+				{{strings "NO_PEOPLE_IN_GROUP_MSG"}}
 				{{/if}}
 			</div>
 		</div>

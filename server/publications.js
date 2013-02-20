@@ -3,3 +3,9 @@ Meteor.publish("groups", function () {
 		groupOwner: this.userId
 	});
 });
+
+Meteor.publish("games", function () {
+	return Games.find({	
+		userId: this.userId,
+	});
+});
