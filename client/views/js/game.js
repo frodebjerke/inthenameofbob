@@ -11,6 +11,14 @@ Template.gameView.personname = function() {
 	return this.persons[index].name;
 };
 
+Template.gameView.hasEndedGame = function() {
+	return Session.get("activeGame");
+};
+
+Template.gameView.endedGame = function() {
+	return Games.findOne(Session.get("activeGame"));
+};
+
 Template.gameView.events({
 	"click #startgame" : function(event, template) {
 		var gameId = Meteor.call("startNewGame",{
@@ -26,16 +34,17 @@ Template.gameView.events({
 
 	"click #answer" : function(event, template) {
 		var index = Session.get("gamePersonIndex");
-		if (this.persons.length > index + 1) {
-			Meteor.call("gameAnswer", {
-				answer: template.find("#nameInput").value,
-				personIndex: index,
+		Meteor.call("gameAnswer", {
+			answer: template.find("#nameInput").value,
+			personIndex: index,
+			gameId: Session.get("activeGame")
+		});
+		Session.set("gamePersonIndex", index + 1);
+		if (this.persons.length <= index + 1){
+			Meteor.call("gameEnd", {
 				gameId: Session.get("activeGame")
 			});
-			Session.set("gamePersonIndex", index + 1);
-		}
-		else {
-			// END GAME
+			Session.set("isGameActive", false);
 		}
 	}
 });	

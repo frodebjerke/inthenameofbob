@@ -13,7 +13,13 @@
 					Answer
 				</button>
 				{{else}}
+				{{#if hasEndedGame}}
+				{{#with endedGame}}
+				GIFF GameID{{userId}}{{ended}}
+				{{/with}}
+				{{else}}
 				{{strings "NO_ACTIVE_GAME_MSG"}}
+				{{/if}}
 				{{/if}}
 				{{else}}
 				{{strings "NO_PEOPLE_IN_GROUP_MSG"}}

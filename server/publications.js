@@ -6,6 +6,6 @@ Meteor.publish("groups", function () {
 
 Meteor.publish("games", function () {
 	return Games.find({	
-		userId: this.userId,
+		userId: this.userId
 	});
 });
