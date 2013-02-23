@@ -1,9 +1,6 @@
 In the name of Bob
 ==================
 
-Content
--------------
-
 Project structure
 -------------
 Based on suggestion from the [Unoficial Meteor FAQ](https://github.com/oortcloud/unofficial-meteor-faq#where-should-i-put-my-files).
@@ -20,14 +17,12 @@ collections/               # <- definitions of collections and methods on them (
 client/lib                 # <- client specific libraries (also loaded first)
 client/lib/environment.js  # <- configuration of any client side packages
 client/lib/helpers/        # <- any helpers (handlebars or otherwise) that are used often in view files
-client/lib/strings/		   # <- static string resources
+client/lib/strings/		     # <- static string resources
 
 client/application.js      # <- basic Meteor.startup code.
 client/subscriptions.js    # <- subscriptions
 client/index.html          # <- toplevel html
 client/index.js            # <- and its JS
-client/views/<page>.html   # <- the templates specific to a single page
-client/views/<page>.js     # <- and the JS to hook it up
 client/views/<type>/       # <- if you find you have a lot of views of the same object type
 client/stylesheets/        # <- css / styl / less files
 
