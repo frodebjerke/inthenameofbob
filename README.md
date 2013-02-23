@@ -17,7 +17,7 @@ collections/               # <- definitions of collections and methods on them (
 client/lib                 # <- client specific libraries (also loaded first)
 client/lib/environment.js  # <- configuration of any client side packages
 client/lib/helpers/        # <- any helpers (handlebars or otherwise) that are used often in view files
-client/lib/strings/		     # <- static string resources
+client/lib/strings/        # <- static string resources
 
 client/application.js      # <- basic Meteor.startup code.
 client/subscriptions.js    # <- subscriptions
