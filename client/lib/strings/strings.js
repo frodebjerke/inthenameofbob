@@ -5,7 +5,11 @@ Strings = {
 	CREATE_GROUP: "Create group",
 	PLAY_GAME: "Play a game",
 	MANAGE_GROUP: "Manage persons",
-	DELETE_BUTTON: "Delete Group",
+	DELETE_GROUP_BUTTON: "Delete group",
+	ADD_PERSON_BUTTON: "Add person",
+	UPDATE_PERSON_BUTTON: "Update person",
+	DELETE_PERSON_BUTTON: "Delete person",
+	SHOW_PERSONS_BUTTON: "Show persons",
 	NEW_GAME_BTN: "New game",
 	NO_ACTIVE_GAME_MSG: "No games are active now. Press 'New game' to start a new one.",
 	NO_PEOPLE_IN_GROUP_MSG: "To play a game on this group you have to add people to it."

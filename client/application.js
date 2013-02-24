@@ -1,4 +1,4 @@
- Meteor.startup(function () {
+  Meteor.startup(function () {
   Meteor.autorun(function () {
     if (! Session.get("showGroup")) {
       var group = Groups.findOne();
@@ -8,6 +8,6 @@
     Session.set("activeView", GroupActions[0].name);
   });
 
-  		Session.set("activeGame", false);
+  	Session.set("activeGame", false);
 		Session.set("gamePersonIndex", 0);
 });
