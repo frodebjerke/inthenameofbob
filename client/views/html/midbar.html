@@ -1,11 +1,11 @@
 <template name="midbar"> 
 	<div class="row-fluid">
 		{{#if currentUser}}
+		{{> dropInArea}}
 		<div class="span3">
 			{{> groupsView}}
 		</div>
 		<div class="span7 offset1">
-			{{> dropInArea}}
 			{{> activeGroupView}}
 		</div>
 		{{else}}
