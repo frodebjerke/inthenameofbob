@@ -1,0 +1,22 @@
+<template name="endGame">
+	<h4>Game finished!</h4>
+	<p>You got {{num_correct}} correct answers from {{num_total}} questions.</p>
+	<div class="row-fluid">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Your Answer</td>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each questions}}
+				<tr class="{{rowColor}}">
+					<td>{{name}}</td>
+					<td>{{answer}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</template>

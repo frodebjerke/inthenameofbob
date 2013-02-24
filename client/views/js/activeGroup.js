@@ -1,5 +1,4 @@
 Template.activeGroupView.activeGroup = function() {
-	var groupId = Session.get("showGroup");
 	return Groups.findOne(Session.get("showGroup"));
 };
 

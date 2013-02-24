@@ -1,0 +1,20 @@
+<template name="dropInArea">
+	{{#if showDropInArea}}
+	<div id="dropInArea">
+		<div class="row-fluid">
+			<div class="span11">
+				{{#if showExplain}}
+				{{> explanation}}
+				{{else}}
+				{{#if showCreateGroup}}
+				{{> createGroup}}
+				{{/if}}
+				{{/if}}
+			</div>
+			<div class="span1">
+				<button href="#" id="closeDropInArea" class="close">&times;</button>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</template>
