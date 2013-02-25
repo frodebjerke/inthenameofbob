@@ -5,11 +5,7 @@
         if (group)
           Session.set("showGroup", group._id);
       }
-      Session.set("activeView", GroupActions[0].name);
     });
-
-    Session.set("activeGame", false);
-    Session.set("gamePersonIndex", 0);
 
     Backbone.history.start({pushState: true});
   });
