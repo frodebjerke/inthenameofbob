@@ -1,14 +1,28 @@
 <template name="navbar">
 	<div class="navbar navbar-inverse">
 		<div class="navbar-inner">
+
+			<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+
 			<a class="brand" href="#">In the name of Bob</a>
+
 			<ul class="nav">
 				<li class="{{activeHome}}"><a href="#" id="home">Home</a></li>
 				<li class="{{activeExplain}}"><a href="#" id="explain">Explanation</a></li>
 			</ul>
-			<ul class="nav pull-right">
+
+			<!-- Everything you want hidden at 940px or less, place within here -->
+			<div class="nav-collapse collapse">
+				<!-- .nav, .navbar-search, .navbar-form, etc -->
+				<ul class="nav pull-right">
 					{{> userStatus}}
-			</ul>
+				</ul>
+			</div>
 		</div>
 	</div>
 </template>
