@@ -6,3 +6,4 @@ Session.setDefault("showGroup", null);
 Session.setDefault("route", "home");
 Session.setDefault("dropInArea", null);
 Session.setDefault("showLoginModal", false);
+Session.setDefault("showRegisterModal", false);
