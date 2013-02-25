@@ -3,10 +3,6 @@ Template.dropInArea.showDropInArea = function () {
 	return inArea != null;
 };
 
-Template.dropInArea.showExplain = function () {
-	return Session.equals("dropInArea", "explain");
-};
-
 Template.dropInArea.showCreateGroup = function () {
 	return Session.equals("dropInArea", "createGroup")
 }

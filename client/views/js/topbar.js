@@ -9,9 +9,3 @@ Template.topbar.activeExplain = function (){
 		return "active";
 	}
 };
-
-Template.topbar.activeCreateGroup = function () {
-	if (Session.equals("route", "createGroup")) {
-		return "active";
-	}
-};
