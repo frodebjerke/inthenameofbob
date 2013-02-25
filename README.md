@@ -21,6 +21,8 @@ client/lib/strings/        # <- static string resources
 
 client/application.js      # <- basic Meteor.startup code.
 client/subscriptions.js    # <- subscriptions
+client/routes.js           # <- Backbone router, with routes
+client/session.js          # <- All Session values should have a Session.setDefault here.
 client/index.html          # <- toplevel html
 client/index.js            # <- and its JS
 client/views/<type>/       # <- if you find you have a lot of views of the same object type
