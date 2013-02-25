@@ -9,3 +9,13 @@ Template.topbar.activeExplain = function (){
 		return "active";
 	}
 };
+
+Template.topbar.events({
+	"click #explain": function (event) {
+		app.navigate("explain", {trigger: true});
+	},
+
+	"click #home": function (event) {
+		app.navigate("home", {trigger: true});
+	}
+});
