@@ -6,5 +6,5 @@
 preserve-inputs
 bootstrap
 accounts-password
-accounts-ui-unstyled
 backbone
+accounts-base
