@@ -1,4 +1,4 @@
-Template.topbar.activeHome = function () {
+Template.navbar.activeHome = function () {
 	if (Session.equals("route", "home")) {
 		return "active";
 	}
@@ -10,7 +10,7 @@ Template.topbar.activeExplain = function (){
 	}
 };
 
-Template.topbar.events({
+Template.navbar.events({
 	"click #explain": function (event) {
 		app.navigate("explain", {trigger: true});
 	},

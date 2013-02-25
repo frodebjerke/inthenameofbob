@@ -1,0 +1,16 @@
+<template name="userStatus">
+	{{#if currentUser}}
+	{{#with currentUser}}
+	<li>
+		<a href="#" id="showUser">{{printEmail}}</a>
+	</li>
+	<li>
+		<a href="#" id="signout">Sign out</a>
+	</li>
+	{{/with}}
+	{{else}}
+	<li>
+		<a href="#" id="login">Sign in</a>
+	</li>
+	{{/if}}
+</template>

@@ -1,0 +1,14 @@
+<template name="navbar">
+	<div class="navbar navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="#">In the name of Bob</a>
+			<ul class="nav">
+				<li class="{{activeHome}}"><a href="#" id="home">Home</a></li>
+				<li class="{{activeExplain}}"><a href="#" id="explain">Explanation</a></li>
+			</ul>
+			<ul class="nav pull-right">
+					{{> userStatus}}
+			</ul>
+		</div>
+	</div>
+</template>
