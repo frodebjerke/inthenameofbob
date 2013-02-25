@@ -1,24 +1,17 @@
-Template.topbar.activeExplain = function (){
-	console.log(Session.get("dropInArea"));
-	if (Session.equals("dropInArea", "explain")) {
-		console.log(Session.get("dropInArea"));
+Template.topbar.activeHome = function () {
+	if (Session.equals("route", "home")) {
+		return "active";
+	}
+}
 
+Template.topbar.activeExplain = function (){
+	if (Session.equals("route", "explain")) {
 		return "active";
 	}
 };
 
 Template.topbar.activeCreateGroup = function () {
-	if (Session.equals("dropInArea", "createGroup")) {
+	if (Session.equals("route", "createGroup")) {
 		return "active";
 	}
-}
-
-Template.topbar.events({
-	"click #explain" : function (event, template) {
-		Session.set("dropInArea", "explain");
-	},
-
-	"click #addGroup" : function (event, template) {
-		Session.set("dropInArea", "createGroup");
-	}
-});
+};
