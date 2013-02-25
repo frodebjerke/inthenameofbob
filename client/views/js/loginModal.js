@@ -1,8 +1,8 @@
-Template.login.showLogin = function () {
-	return Session.equals("showLogin", true);
+Template.loginModal.showLoginModal = function () {
+	return Session.equals("showLoginModal", true);
 };
 
-Template.login.events({
+Template.loginModal.events({
 	'click #login' : function (event, template) {
 		var email = template.find("#email").value;
 		var password = template.find("#password").value;
@@ -13,10 +13,10 @@ Template.login.events({
 			}
 		});
 
-		Session.set("showLogin", false);
+		Session.set("showLoginModal", false);
 	},
 
 	'click .modal .close' : function (event) {
-		Session.set("showLogin", false);
+		Session.set("showLoginModal", false);
 	}
 });

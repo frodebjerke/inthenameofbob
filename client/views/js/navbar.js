@@ -4,7 +4,7 @@ Template.navbar.activeHome = function () {
 	}
 }
 
-Template.topbar.activeExplain = function (){
+Template.navbar.activeExplain = function (){
 	if (Session.equals("route", "explain")) {
 		return "active";
 	}

@@ -5,4 +5,4 @@ Session.setDefault("gamePersonIndex", 0);
 Session.setDefault("showGroup", null);
 Session.setDefault("route", "home");
 Session.setDefault("dropInArea", null);
-Session.setDefault("showLogin", false);
+Session.setDefault("showLoginModal", false);
