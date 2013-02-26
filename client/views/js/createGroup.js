@@ -4,5 +4,11 @@ Template.createGroup.events({
 		var success = Meteor.call("createGroup", {
 			groupname: name
 		});
+
+		Session.set("dropInArea", null);
+	},
+
+	"click #cancel" : function (event) {
+		Session.set("dropInArea", null);
 	}
 });
