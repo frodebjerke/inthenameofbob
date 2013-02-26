@@ -4,6 +4,5 @@ Template.createGroup.events({
 		var success = Meteor.call("createGroup", {
 			groupname: name
 		});
-		Session.set("showAddGroup", false);
 	}
 });

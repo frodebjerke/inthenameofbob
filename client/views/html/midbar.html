@@ -1,6 +1,7 @@
 <template name="midbar"> 
 	<div class="row-fluid">
 		{{#if currentUser}}
+		{{#if main}}
 		{{> dropInArea}}
 		<div class="span3">
 			{{> groupsView}}
@@ -8,7 +9,13 @@
 		<div class="span8">
 			{{> activeGroupView}}
 		</div>
+		{{/if}}
+		{{#if explain}}
+		{{> explanation}}
+		{{/if}}
 		{{else}}
+		{{> loginModal}}
+		{{> registerModal}}
 		{{> infoView}}
 		{{/if}}
 	</div>

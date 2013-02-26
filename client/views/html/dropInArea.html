@@ -2,7 +2,8 @@
 	{{#if showDropInArea}}
 	<div id="dropInArea">
 		<div class="row-fluid">
-			<div class="span11">
+			<button href="#" id="closeDropInArea" class="close">&times;</button>
+			<div class="span10 offset1">
 				{{#if showExplain}}
 				{{> explanation}}
 				{{else}}
@@ -10,9 +11,6 @@
 				{{> createGroup}}
 				{{/if}}
 				{{/if}}
-			</div>
-			<div class="span1">
-				<button href="#" id="closeDropInArea" class="close">&times;</button>
 			</div>
 		</div>
 	</div>

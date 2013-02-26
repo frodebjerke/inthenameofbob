@@ -1,0 +1,17 @@
+<template name="registerModal">
+	{{#if showRegisterModal}}
+	<div class="modal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3>Register at Bob's</h3>
+		</div>
+		<div class="modal-body">
+			<input type="text" id="email" class="input input-large" placeholder="Email"/>
+			<input type="password" id="password" class="input input-large" placeholder="Password"/>
+		</div>
+		<div class="modal-footer">
+			<a href="#" id="register" class="btn btn-primary">Register</a>
+		</div>
+	</div>
+	{{/if}}
+</template>
