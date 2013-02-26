@@ -7,10 +7,13 @@
 		</div>
 		<div class="modal-body">
 			<input type="text" id="email" class="input input-large" placeholder="Email"/>
-			<input type="password" id="password" class="input input-large" placeholder="Password"/>
+			<div class="row-fluid">
+				<input type="password" id="password" class="input input-large" placeholder="Password"/>
+				<input type="password" id="pwVerify" class="input input-large" placeholder="Verify password"/>
+			</div>
 		</div>
 		<div class="modal-footer">
-			<a href="#" id="register" class="btn btn-primary">Register</a>
+			<a href="#" id="register" class="btn btn-primary {{enableRegister}}">Register</a>
 		</div>
 	</div>
 	{{/if}}
