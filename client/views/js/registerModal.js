@@ -11,17 +11,23 @@ Template.registerModal.enableRegister = function () {
 Template.registerModal.events({
 
 	'click #register' : function (event, template) {
-		var options = {};
-		options.email = template.find("#email").value;
-		options.password = template.find("#password").value;
 
-		Accounts.createUser(options, function (err) {
-			if (err) {
-				// handle error
-			}
-		});
+		if (Session.equals("enableRegister", true)) {
 
-		Session.set("showRegisterModal", false);
+			console.log("register");
+
+			var options = {};
+			options.email = template.find("#email").value;
+			options.password = template.find("#password").value;
+
+			Accounts.createUser(options, function (err) {
+				if (err) {
+					console.log("err create user");
+				}
+			});
+
+			Session.set("showRegisterModal", false);
+		}
 	},
 
 	'click .close' : function (event, template) {
