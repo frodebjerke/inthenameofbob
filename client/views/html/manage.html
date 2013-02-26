@@ -20,6 +20,20 @@
 			</div>
 		</div>
 	{{/if}}
+
+	{{#if showListOfPersons}}
+		<div class="row-fluid">
+			<button href="#" class="close closeShowPersons">&times;</button>
+			<ul class="people_list">
+				{{#each persons}}
+					<li>
+						{{name}}
+						 <button href="#" class="delete deletePerson">&times;</button>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	{{/if}}
 </template>
 
 
