@@ -3,7 +3,6 @@
 @sec-color: #16A085;
 @white: #EFEFEF;
 @black: #343434;
-
 @group-height: 4em;
 
 .font-color (@color: @black) {
@@ -18,6 +17,7 @@ html, body {
 
 ul, ol {
 	margin: 0;
+	list-style: none;
 }
 
 /* navbar */
@@ -60,6 +60,7 @@ ul, ol {
 /* Game */
 .game img {height: 350px; min-width: 350px; margin-bottom: 3em;}
 .game-stat {
+	.font-color;
 	.table-bordered {border: @sec-color 1px solid;}
 	.table-bordered td {
 		border: none;
@@ -78,7 +79,7 @@ ul, ol {
 	&:hover {background: @alt;}
 }
 
-.groups {list-style: none; 	margin-bottom: 1em;}
+.groups { margin-bottom: 1em;}
 
 .group-listing {.abstract-group-listing;}
 .creategroup-listing {.abstract-group-listing(@base-color, @sec-color, 1em);}
