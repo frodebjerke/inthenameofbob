@@ -2,7 +2,11 @@
 	<div class="game">
 		<div class="row-fluid">
 			<div class="span3">
-				<button id="startgame" class="btn btn-small {{#unless personExist}}disabled{{/unless}}">{{strings "NEW_GAME_BTN"}}</button>
+				<ul class="thumbnails">
+					<li>
+						<a id="startgame" class="thumbnail action">{{strings "NEW_GAME_BTN"}}</a>
+					</li>
+				</ul>
 			</div>
 			<div class="span9">
 				{{#if personExist}}

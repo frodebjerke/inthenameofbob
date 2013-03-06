@@ -3,13 +3,13 @@ Template.groupsView.groups = function() {
 };
 
 Template.groupsView.events({
-	"click .group": function (event) {
+	"click .group-listing": function (event) {
 		Session.set("showGroup", this._id);
 	}
 });
 
 Template.groupsView.events({
-	"click #createGroup": function (event) {
+	"click .creategroup-listing": function (event) {
 		Session.set("dropInArea", "createGroup");
 	}
 });

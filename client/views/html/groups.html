@@ -1,14 +1,14 @@
 <template name="groupsView">
-	<ul class="thumbnails">
-		<li class="row-fluid">
-			<div class="span10 offset1">
-				<a href="#" id="createGroup" class="thumbnail group" >{{strings "CREATE_GROUP"}}</a>
+	<ul class="groups">
+		<li class="row-fluid creategroup-listing">
+			<div class="span12">
+				<a href="#" class="" >{{strings "CREATE_GROUP"}}</a>
 			</div>
 		</li>
 		{{#each groups}}		
-		<li class="row-fluid">
-			<div class="span10 offset1">
-				<a href="#" class="thumbnail group">
+		<li class="row-fluid group-listing">
+			<div class="span12">
+				<a href="#" class="">
 					{{groupname}}
 				</a>
 			</div>
