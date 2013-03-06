@@ -1,0 +1,87 @@
+@border-color: #ccc;
+@base-color: #1ABC9C;
+@sec-color: #16A085;
+@white: #EFEFEF;
+@black: #343434;
+
+@group-height: 4em;
+
+.font-color (@color: @black) {
+	color: @color;
+	h1, h2, h3, h4, h5, h6, p, a {color: @color;}
+}
+
+html, body {
+	background: @white;
+	.font-color;
+}
+
+ul, ol {
+	margin: 0;
+}
+
+/* navbar */
+.navbar .navbar-inner {
+	background: @base-color;
+	.brand {color: @white; text-shadow: 0 1px 0 @sec-color;}
+	.nav li a {
+		color: @white; text-shadow: 0 1px 0 @sec-color;
+		&:hover {color: @sec-color;};
+	}
+	.nav .active a {
+		background: @sec-color;
+		&:hover {color: @base-color;};
+	}
+
+	.input {background: @white;} 
+}
+
+/* info-view */
+.hero-unit {background: @base-color; color: @white;}
+
+#dropInArea {border-top: solid 1px @border-color; border-bottom: solid 1px @border-color;}
+#dropInArea #closeDropInArea {position: absolute; left: auto; right: 2em;}
+
+/* active group */
+
+.group {
+	background: @base-color;
+	.font-color(@white);
+	.action {background: @sec-color; border: none; height: 3em; padding: 1em;}
+	.nav-tabs {border-bottom: 1px solid @sec-color;}
+	.nav-tabs li a {
+		margin-right: 0;
+		&:hover {background: @sec-color; border-radius: 0; border: 1px solid @sec-color;};
+	}
+	.nav-tabs .active a {background: @base-color; color: @white; border: 1px solid @sec-color; border-bottom-color: transparent; border-radius: 0;}
+	.nav-tabs {padding-left: 1em;}
+}
+
+/* Game */
+.game img {height: 350px; min-width: 350px; margin-bottom: 3em;}
+.game-stat {
+	.table-bordered {border: @sec-color 1px solid;}
+	.table-bordered td {
+		border: none;
+	}
+}
+
+
+/* GROUPS */
+.abstract-group-listing (@main: @base-color, @alt: @sec-color, @border-size: 1px) {
+	background: @main;
+	border-bottom: @alt @border-size solid;
+	a {
+		width: 100%; height: @group-height; display: block; color: @white; padding: 1em;
+	}
+	.active {background: @alt;}
+	&:hover {background: @alt;}
+}
+
+.groups {list-style: none;}
+
+.group-listing {.abstract-group-listing;}
+.creategroup-listing {.abstract-group-listing(@base-color, @sec-color, 1em);}
+
+
+.active {background: @border-color;}
