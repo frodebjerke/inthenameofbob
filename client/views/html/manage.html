@@ -27,8 +27,14 @@
 		<ul>
 			{{#each persons}} 
 			<li class="row-fluid">
+				<div class="span3">
+					{{#if image}}
+					<img width="30px" src="{{image}}"/>
+					{{else}}
+					{{> fileUpload}}
+					{{/if}}
+				</div>
 				<div class="span2">{{name}}</div>
-				{{> fileUpload}}
 				<button href="#" class="delete deletePerson">&times;</button>
 			</li>
 			{{/each}}
