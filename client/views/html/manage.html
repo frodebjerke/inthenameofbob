@@ -12,36 +12,28 @@
 	</ul>
 
 	{{#if showAddPerson}}
-		<div class="row-fluid">
-				<div class="span8 offset2 well">
-				<input id="personName" class="input input-medium" placeholder="Name"/>
-    			<a href="#" id="submitName" class="btn btn-primary">{{strings "ADD_PERSON_BUTTON"}}</a>	
-    			<button href="#" class="close closeAddPerson">&times;</button>
-			</div>
+	<div class="row-fluid">
+		<div class="span8 offset2 well">
+			<input id="personName" class="input input-medium" placeholder="Name"/>
+			<a href="#" id="submitName" class="btn btn-primary">{{strings "ADD_PERSON_BUTTON"}}</a>	
+			<button href="#" class="close closeAddPerson">&times;</button>
 		</div>
+	</div>
 	{{/if}}
 
 	{{#if showListOfPersons}}
-		<div class="row-fluid">
-			<button href="#" class="close closeShowPersons">&times;</button>
-<<<<<<< HEAD
-			<ul class="people_list">
-				{{#each persons}}
-					<li>
-						{{name}}
-						{{> fileUpload}}
-						 <button href="#" class="delete deletePerson">&times;</button>
-=======
-			<ul>
-				{{#each persons}} 
-					<li class="row-fluid">
-						<div class="span2">{{name}}</div>
-						<button href="#" class="delete deletePerson">&times;</button>
->>>>>>> e6e77f687bf22df1f2ecda6dceb1bcb076b732c4
-					</li>
-				{{/each}}
-			</ul>
-		</div>
+	<div class="row-fluid">
+		<button href="#" class="close closeShowPersons">&times;</button>
+		<ul>
+			{{#each persons}} 
+			<li class="row-fluid">
+				<div class="span2">{{name}}</div>
+				{{> fileUpload}}
+				<button href="#" class="delete deletePerson">&times;</button>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
 	{{/if}}
 </template>
 
