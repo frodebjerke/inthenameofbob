@@ -11,6 +11,11 @@ Template.gameView.personname = function() {
 	return this.persons[index].name;
 };
 
+Template.gameView.imageRaw = function() {
+	var index = Session.get("gamePersonIndex");
+	return this.persons[index].image;
+}
+
 Template.gameView.hasEndedGame = function() {
 	return Session.get("activeGame");
 };

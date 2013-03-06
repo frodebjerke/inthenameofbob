@@ -19,11 +19,15 @@
 					<h5>{{num_correct}} points after {{num_answered}}/{{num_total}} persons.</h5>
 					{{/with}}
 				</div>
-				<img alt="{{personname}}"></img>
-				<div class="input-append">
-					<input id="nameInput" type="text" placeholder="{{strings "GAME_NAME_INPUT"}}">
-					<button id="answer"class="btn" type="button">{{strings "GAME_ANSWER_BTN"}}</button>
-				</div>
+				<ul class="thumbnails">
+					<li class="thumbnail">
+						<img src="{{imageRaw}}"/>
+						<h3>Tell Bob the name:</h3>
+						<input id="nameInput" type="text" placeholder="{{strings "GAME_NAME_INPUT"}}">
+					</li>
+				</ul>
+				<button id="answer"class="btn" type="button">{{strings "GAME_ANSWER_BTN"}}</button>
+
 				{{else}}
 				{{#if hasEndedGame}}
 				{{#with game}}
