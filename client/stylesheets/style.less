@@ -44,7 +44,14 @@ ul, ol {
 .action {.basic-action;}
 .great-action {.basic-action(@col-compl-1, @col-compl-3);}
 
-.hero-unit {background: @col-primary-1; color: @white;}
+/* bootstrap component overwrites */
+.hero-unit {background: @col-primary-1; .font-color(@white);}
+.modal {
+	.font-color(@white);
+	.modal-header {background: @col-compl-2; border-bottom: 1px solid @col-primary-1;}
+	.modal-body {background: @col-primary-5;}
+	.modal-footer {background: @col-primary-4; border-top: 1px solid @col-primary-1;}
+}
 
 
 
