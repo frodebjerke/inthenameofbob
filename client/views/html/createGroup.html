@@ -1,18 +1,20 @@
 <template name="createGroup">
 	<div class="page-header">
-		<h1>Create Group <small>Bob likes it when you create new groups!</small></h1>
+		<h1>Create Group</h1>
 	</div>
-	<div class="row-fluid">
-		<div class="span4">
-			<input id="groupName" class="input input-large" placeholder="Groupname"/>
-		</div>
-		<div class="span8">
-		</div>
+	<div class="row-fluid createGroupCont">
+		<ul class="thumbnails">
+			<li>			
+				<input id="groupName" class="input input-large" placeholder="Groupname"/>
+			</li>
+			<li>			
+				<button type="submit" id="createGroup" class="thumbnail action">{{strings "CREATE_GROUP"}}</button>
+			</li>
+			<li>
+				<button type="button" id="cancel" class="thumbnail negative-action">Cancel</button>
+			</li>
+		</ul>
 	</div>
-	<div class="row-fluid">
-		<div class="form-actions">
-			<button type="submit" id="createGroup" class="btn btn-primary">{{strings "CREATE_GROUP"}}</button>
-			<button type="button" id="cancel" class="btn">Cancel</button>
-		</div>
-	</div>
+
+</div>
 </template>

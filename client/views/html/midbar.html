@@ -2,11 +2,11 @@
 	<div class="row-fluid">
 		{{#if currentUser}}
 		{{#if main}}
-		{{> dropInArea}}
 		<div class="span3">
 			{{> groupsView}}
 		</div>
 		<div class="span9">
+			{{> dropInArea}}
 			{{> activeGroupView}}
 		</div>
 		{{/if}}

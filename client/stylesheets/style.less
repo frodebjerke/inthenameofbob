@@ -1,14 +1,27 @@
 @border-color: #ccc;
 @base-color: #1ABC9C;
 @sec-color: #16A085;
+@negative-color: #16A085;
 @white: #EFEFEF;
 @black: #343434;
-@group-height: 4em;
+@action-height: 4em;
+@under-box-margin: 1em;
 
+/* functions */
 .font-color (@color: @black) {
 	color: @color;
 	h1, h2, h3, h4, h5, h6, p, a {color: @color;}
 }
+
+.basic-action (@color: @sec-color){
+	background: @color; 
+	border: none; 
+	height: @action-height; 
+	padding: 1em; 
+	.font-color(@white);
+}
+
+/* general */
 
 html, body {
 	background: @white;
@@ -19,6 +32,13 @@ ul, ol {
 	margin: 0;
 	list-style: none;
 }
+
+.action {.basic-action;}
+.negative-action {.basic-action(@negative-color);}
+
+.hero-unit {background: @base-color; color: @white;}
+
+
 
 /* navbar */
 .navbar .navbar-inner {
@@ -37,17 +57,24 @@ ul, ol {
 }
 
 /* info-view */
-.hero-unit {background: @base-color; color: @white;}
 
 #dropInArea {border-top: solid 1px @border-color; border-bottom: solid 1px @border-color;}
 #dropInArea #closeDropInArea {position: absolute; left: auto; right: 2em;}
+
+/* drop in area */
+#dropInArea {
+	background: @base-color;
+	.font-color(@white);
+	margin-bottom: @under-box-margin;
+	input {margin-top: 1em;}
+	.page-header {border-bottom-color: @sec-color;} 
+}
 
 /* active group */
 
 .group {
 	background: @base-color;
 	.font-color(@white);
-	.action {background: @sec-color; border: none; height: 3em; padding: 1em;}
 	.nav-tabs {border-bottom: 1px solid @sec-color;}
 	.nav-tabs li a {
 		margin-right: 0;
@@ -72,16 +99,13 @@ ul, ol {
 	background: @main;
 	border-bottom: @alt @border-size solid;
 	a {
-		width: 100%; height: @group-height; display: block; color: @white; padding: 1em;
+		width: 100%; height: @action-height; display: block; color: @white; padding: 1em;
 	}
 	.active {background: @alt;}
 	&:hover {background: @alt;}
 }
 
-.groups { margin-bottom: 1em;}
+.groups { margin-bottom: @under-box-margin;}
 
 .group-listing {.abstract-group-listing;}
 .creategroup-listing {.abstract-group-listing(@base-color, @sec-color, 1em);}
-
-
-.active {background: @border-color;}
