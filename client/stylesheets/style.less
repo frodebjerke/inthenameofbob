@@ -20,12 +20,13 @@
 	h1, h2, h3, h4, h5, h6, p, a {color: @color;}
 }
 
-.basic-action (@color: @col-primary-2){
+.basic-action (@color: @col-primary-2, @alt-color: @col-primary-3){
 	background: @color;
 	border: none; 
 	height: @action-height; 
 	padding: 1em; 
 	.font-color(@white);
+	&:hover {background: @alt-color};
 }
 
 /* general */
@@ -41,6 +42,7 @@ ul, ol {
 }
 
 .action {.basic-action;}
+.great-action {.basic-action(@col-primary-4, @col-primary-3);}
 
 .hero-unit {background: @col-primary-1; color: @white;}
 
@@ -52,11 +54,11 @@ ul, ol {
 	.brand {color: @white; text-shadow: 0 1px 0 @col-primary-2;}
 	.nav li a {
 		color: @white; text-shadow: 0 1px 0 @col-primary-2;
-		&:hover {color: @col-primary-2;};
+		&:hover {color: @col-primary-3;};
 	}
 	.nav .active a {
 		background: @col-primary-2;
-		&:hover {color: @col-primary-1;};
+		&:hover {color: @col-primary-3;};
 	}
 
 	.input {background: @white;} 
@@ -80,7 +82,7 @@ ul, ol {
 	.nav-tabs {border-bottom: 1px solid @col-primary-2;}
 	.nav-tabs li a {
 		margin-right: 0;
-		&:hover {background: @col-primary-2; border-radius: 0; border: 1px solid @col-primary-2;};
+		&:hover {background: @col-primary-3; border-radius: 0; border: 1px solid @col-primary-3;};
 	}
 	.nav-tabs .active a {background: @col-primary-1; color: @white; border: 1px solid @col-primary-2; border-bottom-color: transparent; border-radius: 0;}
 	.nav-tabs {padding-left: 1em;}
@@ -97,17 +99,17 @@ ul, ol {
 
 
 /* GROUPS */
-.abstract-group-listing (@main: @col-primary-1, @alt: @col-primary-2, @border-size: 1px) {
+.abstract-group-listing (@main: @col-primary-1, @alt: @col-primary-2, @hover: @col-primary-3, @border-size: 1px) {
 	background: @main;
 	border-bottom: @alt @border-size solid;
 	a {
 		width: 100%; height: @action-height; display: block; color: @white; padding: 1em;
 	}
 	.active {background: @alt;}
-	&:hover {background: @alt;}
+	&:hover {background: @hover;}
 }
 
 .groups { margin-bottom: @under-box-margin;}
 
 .group-listing {.abstract-group-listing;}
-.creategroup-listing {.abstract-group-listing(@col-primary-1, @col-primary-2, 1em);}
+.creategroup-listing {.abstract-group-listing(@col-primary-1, @col-primary-2, @col-primary-3, 1em);}

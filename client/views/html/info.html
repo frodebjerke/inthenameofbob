@@ -3,14 +3,19 @@
 		<div class="hero-unit">
 			<h1>{{strings "APP_NAME"}}</h1>
 			<p>{{strings "DESCRIPTION"}}</p>
-			<p> 
-				<a id="register" class="btn btn-primary btn-large">
-					{{strings "REGISTER_BUTTON"}}
-				</a>
-				<a id="login" class="btn btn-large">
-					Sign in
-				</a>
-			</p>
+			<ul class="thumbnails">
+				<li>
+					<button id="register" class="thumbnail great-action">
+						{{strings "REGISTER_BUTTON"}}
+					</button>
+				</li>
+				<li>
+					<button id="login" class="thumbnail action">
+						Sign in
+					</button>
+				</li>
+			</ul>
+
 		</div>
 	</div>
 </template>
