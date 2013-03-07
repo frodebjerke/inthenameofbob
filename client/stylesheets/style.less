@@ -1,9 +1,16 @@
-@border-color: #ccc;
-@base-color: #1ABC9C;
-@sec-color: #16A085;
-@negative-color: #16A085;
+@col-primary-1: #009D91;
+@col-primary-2: #1D766F;
+@col-primary-3: #00665E;
+@col-primary-4: #33CEC3;
+@col-primary-5: #5DCEC6;
+@col-compl-1: #FF6F00;
+@col-compl-2: #BF6E30;
+@col-compl-3: #A64800;
+@col-compl-4: #FF9340;
+@col-compl-5: #FFB073;
 @white: #EFEFEF;
 @black: #343434;
+
 @action-height: 4em;
 @under-box-margin: 1em;
 
@@ -13,8 +20,8 @@
 	h1, h2, h3, h4, h5, h6, p, a {color: @color;}
 }
 
-.basic-action (@color: @sec-color){
-	background: @color; 
+.basic-action (@color: @col-primary-2){
+	background: @color;
 	border: none; 
 	height: @action-height; 
 	padding: 1em; 
@@ -34,60 +41,55 @@ ul, ol {
 }
 
 .action {.basic-action;}
-.negative-action {.basic-action(@negative-color);}
 
-.hero-unit {background: @base-color; color: @white;}
+.hero-unit {background: @col-primary-1; color: @white;}
 
 
 
 /* navbar */
 .navbar .navbar-inner {
-	background: @base-color;
-	.brand {color: @white; text-shadow: 0 1px 0 @sec-color;}
+	background: @col-primary-1;
+	.brand {color: @white; text-shadow: 0 1px 0 @col-primary-2;}
 	.nav li a {
-		color: @white; text-shadow: 0 1px 0 @sec-color;
-		&:hover {color: @sec-color;};
+		color: @white; text-shadow: 0 1px 0 @col-primary-2;
+		&:hover {color: @col-primary-2;};
 	}
 	.nav .active a {
-		background: @sec-color;
-		&:hover {color: @base-color;};
+		background: @col-primary-2;
+		&:hover {color: @col-primary-1;};
 	}
 
 	.input {background: @white;} 
 }
 
-/* info-view */
-
-#dropInArea {border-top: solid 1px @border-color; border-bottom: solid 1px @border-color;}
-#dropInArea #closeDropInArea {position: absolute; left: auto; right: 2em;}
-
 /* drop in area */
 #dropInArea {
-	background: @base-color;
+	background: @col-primary-1;
 	.font-color(@white);
 	margin-bottom: @under-box-margin;
 	input {margin-top: 1em;}
-	.page-header {border-bottom-color: @sec-color;} 
+	.page-header {border-bottom-color: @col-primary-2;}
+	#closeDropInArea {position: relative; left: auto; right: 1em; top: 1em;}
 }
 
 /* active group */
 
 .group {
-	background: @base-color;
+	background: @col-primary-1;
 	.font-color(@white);
-	.nav-tabs {border-bottom: 1px solid @sec-color;}
+	.nav-tabs {border-bottom: 1px solid @col-primary-2;}
 	.nav-tabs li a {
 		margin-right: 0;
-		&:hover {background: @sec-color; border-radius: 0; border: 1px solid @sec-color;};
+		&:hover {background: @col-primary-2; border-radius: 0; border: 1px solid @col-primary-2;};
 	}
-	.nav-tabs .active a {background: @base-color; color: @white; border: 1px solid @sec-color; border-bottom-color: transparent; border-radius: 0;}
+	.nav-tabs .active a {background: @col-primary-1; color: @white; border: 1px solid @col-primary-2; border-bottom-color: transparent; border-radius: 0;}
 	.nav-tabs {padding-left: 1em;}
 }
 
 /* Game */
 .game-stat {
 	.font-color;
-	.table-bordered {border: @sec-color 1px solid;}
+	.table-bordered {border: @col-primary-2 1px solid;}
 	.table-bordered td {
 		border: none;
 	}
@@ -95,7 +97,7 @@ ul, ol {
 
 
 /* GROUPS */
-.abstract-group-listing (@main: @base-color, @alt: @sec-color, @border-size: 1px) {
+.abstract-group-listing (@main: @col-primary-1, @alt: @col-primary-2, @border-size: 1px) {
 	background: @main;
 	border-bottom: @alt @border-size solid;
 	a {
@@ -108,4 +110,4 @@ ul, ol {
 .groups { margin-bottom: @under-box-margin;}
 
 .group-listing {.abstract-group-listing;}
-.creategroup-listing {.abstract-group-listing(@base-color, @sec-color, 1em);}
+.creategroup-listing {.abstract-group-listing(@col-primary-1, @col-primary-2, 1em);}
