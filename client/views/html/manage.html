@@ -1,46 +1,40 @@
 <template name="manageView">
 	<ul class="thumbnails">
 		<li>
-			<button id="addPerson" class="thumbnail action">{{strings "ADD_PERSON_BUTTON"}}</button>
-		</li>
-		<li>
-			<button id="showPersons" class="thumbnail action">{{strings "SHOW_PERSONS_BUTTON"}}</button>
+			<button id="showAddPerson" class="thumbnail action">{{strings "ADD_PERSON_BUTTON"}}</button>
 		</li>
 		<li>
 			<button id="deleteGroup" class="thumbnail action">{{strings "DELETE_GROUP_BUTTON"}}</button>
 		</li>
 	</ul>
-
-	{{#if showAddPerson}}
-	<div class="row-fluid">
-		<div class="span8 offset2 well">
+	<ul class="person-list">
+		{{#if showAddPerson}}
+		<li class="add-person">
+			<strong>Add person with </strong>
 			<input id="personName" class="input input-medium" placeholder="Name"/>
+			<strong> then upload a picture here: </strong>
+			{{> fileUpload}}
 			<button id="submitName" class="btn btn-primary">{{strings "ADD_PERSON_BUTTON"}}</button>	
 			<button class="close closeAddPerson">&times;</button>
-		</div>
-	</div>
-	{{/if}}
+		</li>
+		{{/if}}
+		{{#each persons}} 
+		<li>
+			<strong>Person with name </strong>
+			{{name}}
+			{{#if image}}
+			<strong> looks like this </strong> 
+			<img width="30px" src="{{image}}"/>
+			<strong>.</strong>
+			{{else}}
+			<strong>. Please upload a picture of </strong>{{name}}<strong> by clicking here: </strong>
+			{{> fileUpload}}
+			{{/if}}
+			<button class="icon deletePerson"><i class="icon-trash"></i></button>
+		</li>
+		{{/each}}
 
-	{{#if showListOfPersons}}
-	<div class="row-fluid">
-		<button href="#" class="close closeShowPersons">&times;</button>
-		<ul>
-			{{#each persons}} 
-			<li class="row-fluid">
-				<div class="span3">
-					{{#if image}}
-					<img width="30px" src="{{image}}"/>
-					{{else}}
-					{{> fileUpload}}
-					{{/if}}
-				</div>
-				<div class="span2">{{name}}</div>
-				<button href="#" class="delete deletePerson">&times;</button>
-			</li>
-			{{/each}}
-		</ul>
-	</div>
-	{{/if}}
+	</ul>
 </template>
 
 
