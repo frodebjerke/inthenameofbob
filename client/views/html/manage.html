@@ -1,13 +1,13 @@
 <template name="manageView">
 	<ul class="thumbnails">
 		<li>
-			<a href="#" id="addPerson" class="thumbnail action">{{strings "ADD_PERSON_BUTTON"}}</a>
+			<button id="addPerson" class="thumbnail action">{{strings "ADD_PERSON_BUTTON"}}</button>
 		</li>
 		<li>
-			<a href="#" id="showPersons" class="thumbnail action">{{strings "SHOW_PERSONS_BUTTON"}}</a>
+			<button id="showPersons" class="thumbnail action">{{strings "SHOW_PERSONS_BUTTON"}}</button>
 		</li>
 		<li>
-			<a href="#" id="deleteGroup" class="thumbnail action">{{strings "DELETE_GROUP_BUTTON"}}</a>
+			<button id="deleteGroup" class="thumbnail action">{{strings "DELETE_GROUP_BUTTON"}}</button>
 		</li>
 	</ul>
 
@@ -15,8 +15,8 @@
 	<div class="row-fluid">
 		<div class="span8 offset2 well">
 			<input id="personName" class="input input-medium" placeholder="Name"/>
-			<a href="#" id="submitName" class="btn btn-primary">{{strings "ADD_PERSON_BUTTON"}}</a>	
-			<button href="#" class="close closeAddPerson">&times;</button>
+			<button id="submitName" class="btn btn-primary">{{strings "ADD_PERSON_BUTTON"}}</button>	
+			<button class="close closeAddPerson">&times;</button>
 		</div>
 	</div>
 	{{/if}}

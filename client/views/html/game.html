@@ -4,11 +4,11 @@
 			<div class="span3">
 				<ul class="thumbnails">
 					<li>
-						<a id="startgame" class="thumbnail action">{{strings "NEW_GAME_BTN"}}</a>
+						<button id="startgame" class="thumbnail action">{{strings "NEW_GAME_BTN"}}</button>
 					</li>
 				</ul>
 			</div>
-			<div class="span9">
+			<div class="span9 question">
 				{{#if personExist}}
 				{{#if activeGame}}
 				<div class="span4">
@@ -22,10 +22,9 @@
 				<ul class="thumbnails">
 					<li class="thumbnail">
 						<img src="{{imageRaw}}"/>
-						<h3>Tell Bob the name:</h3>
-						<input id="nameInput" type="text" placeholder="{{strings "GAME_NAME_INPUT"}}">
 					</li>
 				</ul>
+				<input id="nameInput" type="text" placeholder="{{strings "GAME_NAME_INPUT"}}">
 				<button id="answer"class="btn" type="button">{{strings "GAME_ANSWER_BTN"}}</button>
 
 				{{else}}
