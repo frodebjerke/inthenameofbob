@@ -13,13 +13,13 @@
 			<strong>Add person with </strong>
 			<input id="personName" class="input input-medium" placeholder="Name"/>
 			<strong> then upload a picture here: </strong>
-			{{> fileUpload}}
-			<button id="submitName" class="btn btn-primary">{{strings "ADD_PERSON_BUTTON"}}</button>	
+			<input class="img-upload" type="file" />
+			<button id="submitPerson" class="btn btn-primary">{{strings "ADD_PERSON_BUTTON"}}</button>	
 			<button class="close closeAddPerson">&times;</button>
 		</li>
 		{{/if}}
 		{{#each persons}} 
-		<li>
+		<li class="person">
 			<strong>Person with name </strong>
 			{{name}}
 			{{#if image}}
@@ -28,7 +28,7 @@
 			<strong>.</strong>
 			{{else}}
 			<strong>. Please upload a picture of </strong>{{name}}<strong> by clicking here: </strong>
-			{{> fileUpload}}
+			<input class="img-upload" type="file" />
 			{{/if}}
 			<button class="icon deletePerson"><i class="icon-trash"></i></button>
 		</li>
