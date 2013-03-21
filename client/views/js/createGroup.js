@@ -1,10 +1,14 @@
 Template.createGroup.events({
 	"click #createGroup" : function (event, template) {
 		var name = template.find("#groupName").value;
-		var success = Meteor.call("createGroup", {
-			groupname: name
-		});
+		var callback = function (error, result) {
+			Session.set("showGroup", result);
+		}
 
+		Meteor.call("createGroup", {
+			groupname: name
+		}, callback);
+		
 		Session.set("dropInArea", null);
 	},
 
