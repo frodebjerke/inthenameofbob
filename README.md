@@ -1,6 +1,10 @@
 In the name of Bob
 ==================
 
+About
+------------
+In the Name of Bob is a web application to help people remember the names of people, it is going to be based on Memory techniques by Oddbjørn By.
+
 Project structure
 -------------
 Based on suggestion from the [Unoficial Meteor FAQ](https://github.com/oortcloud/unofficial-meteor-faq#where-should-i-put-my-files).
